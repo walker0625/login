@@ -26,7 +26,7 @@ public class LogFilter implements Filter {
 
         try{
             log.info("request[{}] [{}]", uuid, requestURI);
-            chain.doFilter(request, response); // 최종 호출 이 부분이 없으면 그대로 멈춤
+            chain.doFilter(request, response); // 최종 호출 이 부분이 없으면 그대로 멈춤(필터의 단점)
         }catch (Exception e) {
             throw e;
         } finally {
